@@ -1,10 +1,12 @@
 const express = require('express')
-
+const cors = require('cors')
 const app = express(),
   port = process.env.PORT || 3000
 
-app.get('/', (_request, response) => {
-  response.send({ hello: 'World' })
+  app.use(cors())
+
+  app.get('/', (_request, response) => {
+  response.send({ hanna: 'Testar' })
 })
 
 app.listen(port, () => {
